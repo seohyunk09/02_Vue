@@ -1,0 +1,36 @@
+<!-- //message 변수에 "Hello Vue3"를 지정하고, vue를 이용해 화면에 출력하세요. -->
+<!-- 콘솔에서 해당 메시지를 "첫 번째 Vue3 앱 입니다" 변경하여 화면에 출력하세요. -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- view : 보여지는 부분! -->
+      <h2>{{message}}</h2>
+      <!-- ${변수}처럼 html 자체가 템플릿이 되어버려!-->
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <!-- CDN :https://unpkg.com/vue  -->
+
+    <script>
+      let model = {
+        message: 'Hello Vue3!',
+      }; /* 모델!!: 순수하게 데이터를 가지고 있어!!   전역 변수로...  !! 
+           나의 의도는 모델에 있는 message 를 위에 있는 곳에 넣고 싶다??
+                                                  */
+      //   const app = document.querySelector('#app');
+      //app.textContent = model.message;
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return model;
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

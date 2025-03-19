@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../../../01_Node/node"
+	},
+	{
+		"path": "../../.."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "02_Vue"
+  }
+}
