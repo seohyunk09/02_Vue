@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="app">
+      <h1>사용자 목록</h1>
       <label
         >정렬 기준:
         <form>
@@ -18,12 +19,9 @@
           <label>
             <input type="radio" v-model="sortKey" value="username" />username
           </label>
+
           <label>
-            <input
-              type="radio"
-              v-model="sortKey"
-              value="company"
-            />company</label
+            <input type="radio" v-model="sortKey" value="phone" />phone</label
           >
         </form>
       </label>
@@ -35,6 +33,7 @@
             <th @click="sortKey='name'">name</th>
             <th @click="sortKey='username'">username</th>
             <th @click="sortKey='phone'">phone</th>
+            <th @click="sortKey='company'">company</th>
           </tr>
         </thead>
         <tbody>
@@ -43,6 +42,7 @@
             <td>{{user.name}}</td>
             <td>{{user.username}}</td>
             <td>{{user.phone}}</td>
+            <td>{{user.company.name}}</td>
           </tr>
         </tbody>
       </table>
