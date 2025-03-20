@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    ```html
+    <div id="app">
+      <div id="app">
+        <h1>키 입력 예제</h1>
+        <ul>
+          <li>Enter 키를 눌러보세요</li>
+          <li>좌/우 방향키를 눌러보세요</li>
+          <li>Ctrl+C 또는 Shift+A를 눌러보세요</li>
+        </ul>
+        <input
+          type="text"
+          @keyup.enter="handleEnter"
+          @keyup.left="handleLeft"
+          @keyup.right="handleRight"
+          @keyup.ctrl.c="handleCopy"
+          @keyup.shift.a="handleShiftA"
+          placeholder="지정된 키를 눌러보세요"
+        />
+        <!-- ~~ 누를 때마다 어떠한 것들을 불어올지 정할 수 있음 -->
+
+        <hr />
+        <h1>입력 결과 : <span v-if="message">{{ message }}</span></h1>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            message: '',
+          };
+        },
+        methods: {
+          handleEnter() {
+            this.message = 'Enter 키가 눌렸습니다!';
+          },
+          handleLeft() {
+            this.message = '왼쪽 방향키가 눌렸습니다!';
+          },
+          handleRight() {
+            this.message = '오른쪽 방향키가 눌렸습니다!';
+          },
+          handleCopy(e) {
+            e.preventDefault(); // 브라우저 기본 동작 방지
+            this.message = 'Ctrl+C가 눌렸습니다! (복사)';
+          },
+          handleShiftA(e) {
+            this.message = 'Shift+A가 눌렸습니다!';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
