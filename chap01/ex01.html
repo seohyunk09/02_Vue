@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- view : 보여지는 부분! -->
+      <h2>{{message}}</h2>
+      <!-- ${변수}처럼 html 자체가 템플릿이 되어버려!-->
+      <h3>{{test}}</h3>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <!-- CDN :https://unpkg.com/vue  -->
+
+    <script>
+      let model = {
+        message: 'Hello Vue3!',
+        test: '아이고 졸려',
+      }; /* 모델!!: 순수하게 데이터를 가지고 있어!!   전역 변수로...  !! 
+           나의 의도는 모델에 있는 message 를 위에 있는 곳에 넣고 싶다??
+                                                  */
+      const app = document.querySelector('#app');
+      app.textContent = model.message;
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return model;
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

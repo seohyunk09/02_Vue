@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse-event</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>마우스 이벤트 예제</h1>
+      <ul>
+        <li>left 버튼을 눌러보세요</li>
+        <li>right 버튼을 눌러보세요</li>
+        <li>middle 버튼을 눌러보세요</li>
+        <li>ctrl+left 버튼을 눌러보세요</li>
+        <li>ctrl+right 버튼을 눌러보세요</li>
+        <li>ctrl+middle 버튼을 눌러보세요</li>
+      </ul>
+      <div
+        style="width: 100px; height: 100px; background-color: #f0f0f0"
+        @contextmenu.prevent
+        @click.left="handleLeft"
+        @click.right="handleRight"
+        @click.middle="handleMiddle"
+        @click.ctrl.left="handleCtrlLeft"
+        @click.ctrl.right="handleCtrlRight"
+        @click.ctrl.middle="handleCtrlMiddle"
+      ></div>
+      <hr />
+      <h1>클릭 결과 : <span v-if="message">{{ message }}</span></h1>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            message: '',
+          };
+        },
+        methods: {
+          handleLeft() {
+            this.message = 'left 버튼을 눌렀습니다.';
+          },
+          handleRight() {
+            this.message = 'right 버튼을 눌렀습니다.';
+          },
+          handleMiddle() {
+            this.message = 'middle 버튼을 눌렀습니다.';
+          },
+          handleCtrlLeft() {
+            this.message = 'ctrl+left 버튼을 눌렀습니다.';
+          },
+          handleCtrlRight() {
+            this.message = 'ctrl+right 버튼을 눌렀습니다.';
+          },
+          handleCtrlMiddle() {
+            this.message = 'ctrl+middle 버튼을 눌렀습니다.';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

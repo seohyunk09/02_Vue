@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-01</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 보간법 -->
+      <div v-text="message"></div>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      // MOdel (모델)
+      const model = { message: '<h2>"Hello Vue3!"</h2>' };
+      //View 모델
+      //Vue 인스턴스 == 애플리케이션 인스턴스 ==루트 컴포넌트 인스턴스
+
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          // 데이터 옵션:
+          //-return 되는 객체의 속성들은 Vue 의 반응형 시스템에 의해 관리됨
+          // -> 반환되는 model 객체의 message 속성 값이 수정되면
+          // v-text="message" 요소가 수정됨
+
+          // -proxy 객체가 제어
+          return model;
+        },
+      }).mount('#app');
+      // mount('#app') :  #app 선택자에 해당하는 DOM 요소에 Vue 애플리케이션 마운트
+    </script>
+  </body>
+</html>
