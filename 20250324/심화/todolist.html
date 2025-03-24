@@ -64,7 +64,7 @@
                 >
               </div>
               <div style="display: flex; justify-content: space-between">
-                <span>전체 todo 개수 : {{totalTodos}}</span>
+                <span>전체 todo 개수 : {{todolist.length}}</span>
                 <span>완료 todo 개수: {{completedTodos}}</span>
                 <span>미완료 todo 개수 : {{pendingTodos}}</span>
               </div>
@@ -123,6 +123,7 @@
         },
 
         computed: {
+          /* 위에 있는 데이터가 변할 때!!자동으로 호출되는 역할! */
           totalTodos() {
             return this.todolist.length;
           },
