@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first bootstrap page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--스타일 마지막에 나의 css 파일 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!--  -->
+    <style>
+      .container {
+        background-color: aqua;
+      }
+    </style>
+
+  </head>
+  <body>
+    
+    <div class="container pt-5">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container class.</p>
+      <p>The .container class provides a responsive fixed width container.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-8">.col-sm-8</div>
+    </div>
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+      <h1>Jumbotron Example</h1>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong>Success!</strong> This alert box could indicate a successful or
+      positive action.
+    </div>
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong>Success!</strong> This alert box could indicate a successful or
+      positive action.
+    </div>
+    <div class="btn-group btn-group-lg">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Photos</a></li>
+      <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+      <li class="breadcrumb-item"><a href="#">Italy</a></li>
+      <li class="breadcrumb-item active">Rome</li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item active">Active item</li>
+      <li class="list-group-item">Second item</li>
+      <li class="list-group-item">Third item</li>
+    </ul>
+    
+    <div class="card" style="width: 500px">
+      <img class="card-img-top" src="004.png" alt="Card image" />
+      <div class="card-img-overlay">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text.</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+      <!-- grid와 연계! -->
+    </div>
+ 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo</a>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              ...
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Dropdown</a
+                >
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                    ...
+                    </ul>
+                    </div>
+                    </div>
+                    </nav>
+  </body>
+</html>

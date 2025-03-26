@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본 문제</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+
+    <!--나의 css 파일  -->
+  </head>
+  <body>
+    <div class="mt-4 p-4 text-black rounded text-center" style="
+    background: url('bear.jpg') no-repeat center center;
+    background-size: auto 100%  auto 100%;
+    height: 300px;
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;">
+    <div>
+        <h1 class="mt-5" > FullStack Study</h1>
+        <p>Vue+ 자바 기반의 풀스택 기술을 배웁니다.</p>
+    </div>
+</div>
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fullstack</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        
+        data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        </ul>
+        </div>
+        </div>
+        </nav>
+
+    <div class="container">
+
+      <h1 class="mt-5" ><i class="fa-solid fa-list"></i> 글 목록</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>등록일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="#">글 제목1</a></td>
+            <td>user01</td>
+            <td>2025-03-21</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="#">글 제목2</a></td>
+            <td>user02</td>
+            <td>2025-03-21</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="#">글 제목3</a></td>
+            <td>user03</td>
+            <td>2025-03-21</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="#">글 제목4</a></td>
+            <td>user04</td>
+            <td>2025-03-21</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a href="#">글 제목5</a></td>
+            <td>user5</td>
+            <td>2025-03-21</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-between align-items-center">
+      <nav aria-label="Page navigation example" class="flex-grow-1">
+        <ul class="pagination justify-content-center m-0"> 
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+                <button class="btn btn-primary ms-3"> 
+                    <i class="fa-regular fa-pen-to-square"></i>
+                     글쓰기
+                </button>
+            </div>
+            <div class="d-flex justify-content-center text-center mt-4">
+                <p>© 2025.03 created by KB It's your Life_6기_전공 12회차</p>
+            </div>
+    
+    
+      </div>
+      </div>
+    </div>
+    <!-- bootstrap js -->
+    <script src=" ./bootstrap.bundle.min.js"></script>
+  </body>
+</html>
